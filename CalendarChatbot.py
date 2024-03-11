@@ -128,7 +128,7 @@ def return_all_appointment() -> list:
 
 return_appointment_chain = RunnableParallel({}) | return_all_appointment
 
-create_parshttps://github.com/wondamo/new.giter = JsonOutputParser(pydantic_object=Appointment)
+create_parser = JsonOutputParser(pydantic_object=Appointment)
 create_appointment_chain = (
     {"tool_response": return_appointment_chain, "input": lambda x: x["input"], "chat_history":lambda x: x["chat_history"]}
     | RunnableParallel(tool_response=lambda x: x['tool_response'], input=lambda x: x["input"], chat_history=lambda x: x["chat_history"], today_date=lambda x: datetime.date.today().strftime("%B %d, %Y"))
