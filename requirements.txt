@@ -1,1 +1,6 @@
 fastapi[all]
+langchain_openai
+langchain
+langchain-core
+langchain-community
+langserve[all]
