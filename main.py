@@ -1,4 +1,4 @@
-from CalendarChatbot import full_chain
+from calendarChatbot import full_chain
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.chat_history import BaseChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
